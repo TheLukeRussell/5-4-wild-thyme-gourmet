@@ -6,11 +6,15 @@ class OrderForm extends Component {
             <form>
                 <h4>Subtotal</h4>
                 <div className='row no-gutters'>
-                <input className='col m-4' type='text'></input>
+                <input className='col m-3' type='text' placeholder='Name for the Order...'></input>
                 </div>
                 <div className='row no-gutters'>
-                <input className='col m-4' type='text'></input>
+                <input className='col m-3' type='text' placeholder='Phone Number...'></input>
                 </div>
+                <div className='row no-gutters'>
+                <button className='btn col-4 offset-4' id='place-order'>Place Order</button>
+                </div>
+                
             </form>
         )
     }

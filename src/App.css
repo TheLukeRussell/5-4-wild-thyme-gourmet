@@ -5,13 +5,28 @@
 }
 
 h1 {
+  /* text-align: center; */
+  /* padding: 50px; */
+  font-size:60px;
+  /* color: #000; */
+  font-family: 'Rock Salt', cursive;
+  /* border-bottom: 1pt solid black; */
+  /* background-color: rgba(255, 255, 255, 0.76); */
+}
+
+#header{
+  background-color: rgba(255, 255, 255, 0.76);
   text-align: center;
   padding: 50px;
-  font-size:60px;
-  color: #000;
-  font-family: 'Rock Salt', cursive;
-  background-color: rgba(255, 255, 255, 0.76);
+  padding-bottom: 0;
 }
+
+#logo {
+  color: #000;
+  /* background-color: #FFF; */
+  font-size: 90px;
+}
+
 h3 {
   font-family: 'Oleo Script', cursive;
 }
@@ -66,4 +81,13 @@ li {
 
 .menu-form {
   /* display: block; */
+}
+#place-order {
+  background-color: #000;
+  color: #AA915F;
+}
+
+#add-item {
+  background-color: #000;
+  color: #AA915F;
 }

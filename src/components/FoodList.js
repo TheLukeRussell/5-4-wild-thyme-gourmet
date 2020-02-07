@@ -10,9 +10,9 @@ class FoodItem extends Component {
                 </div>
                 </div>
                 <div className='row no-gutters'>
-                <aside className='col-2'><img src='{this.props.food.image}' /></aside>
-                <p className='col'>{this.props.food.description}</p>
-                <button id='add-item' className='btn btn-primary col-2'>Add To Cart</button>
+                <aside className='col-2 m-3'><img src='{this.props.food.image}' /></aside>
+                <p className='col m-3'>{this.props.food.description}</p>
+                <button id='add-item' className='btn col-2 m-3'>Add To Cart</button>
                 </div>
             </li>
 
