@@ -13,9 +13,6 @@ state = {
   ]
 }
 
-
-
-
   render() {
   return (
     <div className='MenuApp'>
@@ -24,13 +21,17 @@ state = {
         <h1>Wild Thyme Gourmet</h1>
       </div>
     </div>
-    <div className='row no-gutters'>
-      <div className='col-9'>
-        <FoodList foods={this.state.foods} />
-      </div>
-      <div className='col-3'>
-        <OrderForm />
-      </div>
+    <div className='row no-gutters menu-form'>
+      
+        <div className='col-7 food-list'>
+          <h2>Entreés</h2>
+          <FoodList foods={this.state.foods} />
+        </div>
+        <div className='col offset-1 order-form'>
+          <h2>Food Order</h2>
+          <OrderForm />
+        </div>
+      
     </div>
     </div>
   );
