@@ -6,7 +6,7 @@ class FoodItem extends Component {
             <li>
                 <div className='row no-gutters'>
                     <div className='col'>
-                <h3>{this.props.food.name}</h3>
+        <h3>{this.props.food.name} - {this.props.food.price}</h3>
                 </div>
                 </div>
                 <div className='row no-gutters'>
