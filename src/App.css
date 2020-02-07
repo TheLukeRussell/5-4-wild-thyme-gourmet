@@ -14,11 +14,23 @@ h1 {
   /* background-color: rgba(255, 255, 255, 0.76); */
 }
 
+#image {
+  width: 100%;
+
+}
+
+aside {
+  display: flex;
+  height: 100px;
+  border: #AA915F solid 2pt;
+}
+
 #header{
   background-color: rgba(255, 255, 255, 0.80);
   text-align: center;
-  padding: 50px;
-  padding-bottom: 0;
+  padding: 20px;
+  border: #AA915F solid 2pt;
+  margin: 0 200px
 }
 
 h5 {
@@ -26,12 +38,6 @@ h5 {
   font-weight: bold;
   font-size: 12px;
   text-align: center;
-}
-
-#logo {
-  color: #000;
-  /* background-color: #FFF; */
-  font-size: 90px;
 }
 
 h3 {
@@ -61,16 +67,23 @@ body {
   background-color: #000
 }
 
+.container-fluid {
+  min-width: 1600px;
+}
+
 .food-list {
   background-color: rgba(255, 255, 255, 0.80);
   margin-top: 50px;
   margin-left: 70px;
+  border: #AA915F solid 2pt;
 }
 
 .order-form {
   background-color: rgba(255, 255, 255, 0.80);
   margin-top: 50px;
   margin-right: 70px;
+  border: #AA915F solid 2pt;
+  height: 950px;
 }
 
 .MenuApp {
@@ -83,18 +96,50 @@ ul {
 }
 
 li {
-  padding: 20px;
+  padding: 15px;
 }
 
-.menu-form {
-  /* display: block; */
+
+#food-row {
+  border-top: #000 solid 4pt;
 }
+
 #place-order {
-  background-color: #000;
   color: #AA915F;
+  border: #AA915F solid 1pt;
+  background: linear-gradient(to right, #fff 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: bottom right;
+  transition: all .5s ease;
+}
+
+#place-order:hover {
+  background-position: left bottom;
 }
 
 #add-item {
-  background-color: #000;
   color: #AA915F;
+  height: 50px;
+  border: #AA915F solid 1pt;
+  background: linear-gradient(to right, #fff 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: all .5s ease;
+}
+
+#add-item:hover {
+  background-position: left bottom;
+}
+
+#order-row {
+  text-align: center;
+}
+
+#food-order {
+  border-bottom: 4pt solid #000;
+}
+
+.subtotal {
+  text-align: left;
+  margin-left: 50px;
 }

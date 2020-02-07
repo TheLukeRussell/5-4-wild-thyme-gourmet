@@ -1,12 +1,28 @@
 import React, {Component} from 'react';
 
+class OrderList extends Component {
+    render() { 
+        return(
+                <li id='order-row'>
+                    <div className='row no-gutters'>
+                    <div className='col'>
+                    <p>{this.props.food.name} - {this.props.food.price}</p>
+                    </div>
+                </div>
+            </li>
+        )
+    }
+}
+
 class OrderForm extends Component {
     render() {
+        const foods = this.props.foods.map(food => <OrderList key={food.id} name={food.name} food={food} />);
         return(
             <form>
-                <h4>Subtotal</h4>
+                <ul className='list-group'>{foods}</ul>
+                <h4 className='subtotal'>Subtotal = </h4>
                 <div className='row no-gutters'>
-                <input className='col m-3' type='text' placeholder='Name for the Order...'></input>
+                <input className='col m-3 order-name' type='text' placeholder='Name for the Order...'></input>
                 </div>
                 <div className='row no-gutters'>
                 <input className='col m-3' type='text' placeholder='Phone Number...'></input>
