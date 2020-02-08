@@ -17,21 +17,36 @@ state = {
     {id: 6, name: 'Broccoli Pad Thai', description: 'It\'s Pad Thai made at a place that sells hotdogs and hamburgers so how good could it really be...?', image:'https://img.taste.com.au/ZtHBNTCz/w720-h480-cfill-q80/taste/2016/11/broccolini-pad-thai-89594-1.jpeg', inCart: false, price: '$9.99'},
     {id: 7, name: 'Bring Your Own Item', description: 'We\'re a cool restaraunt that lets you bring your own food. Hey, we\'ll even cook it for ya!', image:'https://media.sciencephoto.com/image/h1103295/800wm', inCart: false, price: '$99.99'}
   ],
-  order: []
+  order: [],
+  total: 0,
+  counter: 8
 }
 
 addFood = (id) => {
   const {foods} = this.state;
   const food = foods[id]
-  foods.splice(0, food)
-  // food.inCart = false;
-  // food.inCart = !food.inCart
+  // foods.splice(0, food)
+  food.inCart = true;
+  this.setState({
+    order: [food.name]
+  })
+//  console.log(food)
+}
+
+addOrder = (food) => {
+  food.id = this.state.counter
+  let foods = this.state.foods.slice();
+  foods.unshift(food);
+  console.log('food', food);
+
   this.setState({
     foods,
-    order: food
-  })
-  console.log(food)
-}
+    order: [food.name],
+    counter: this.state.counter + 1
+  });
+};
+
+
 
 // removeItem = (id) => {
 //   const {foods} = this.state;
@@ -54,11 +69,11 @@ addFood = (id) => {
         <div className='col-7 food-list'>
           <h2>Entreés</h2>
           <h5>Each entreé is served with a choice of a Baked Potato, Sweet Potato, or Frech Fries (the obvious choice)</h5>
-          <FoodList foods={this.state.foods} addFood={this.addFood} />
+          <FoodList foods={this.state.foods} addOrder={this.addOrder} order={this.state.order} addFood={this.addFood} />
         </div>
         <div className='col offset-1 order-form'>
           <h2 id='food-order'>Food Order</h2>
-          <OrderForm foods={this.state.foods} addFood={this.addFood} removeItem={this.removeItem} />
+          <OrderForm foods={this.state.foods} addOrder={this.addOrder} order={this.state.order}  addFood={this.addFood} />
         </div>
       
     </div>

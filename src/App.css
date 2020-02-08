@@ -61,6 +61,10 @@ p {
   font-size: 18px;
 }
 
+#list-group {
+  text-align: center
+}
+
 h4 {
   text-align: center;
   font-family: 'Oleo Script', cursive;
