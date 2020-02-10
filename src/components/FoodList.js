@@ -5,13 +5,14 @@ class FoodItem extends Component {
     handleAddFood = (event) => {
         event.preventDefault();
         let index = parseInt(this.props.index);
+        console.log(index);
         this.props.addFood(index)
 
-        const order = {
-            name: this.props.name,
-            price: this.props.price
-        }
-        console.log(order)
+        // const order = {
+        //     name: this.props.name,
+        //     price: this.props.price
+        // }
+        // console.log(order)
     }
     
 
@@ -26,7 +27,7 @@ class FoodItem extends Component {
                 </div>
                 </div>
                 <div className='row no-gutters'>
-                <aside className='col-2 m-3'><img id='image' src={this.props.food.image} /></aside>
+                <aside className='col-2 m-3'><img id='image' src={this.props.food.image} alt='hello' /></aside>
                 <p className='col m-3'>{this.props.food.description}</p>
                 <button onClick={this.handleAddFood} id='add-item' className='btn col-2 m-3'>Add To Order</button>
                 </div>

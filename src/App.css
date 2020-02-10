@@ -62,11 +62,13 @@ p {
 }
 
 #list-group {
-  text-align: center
+  text-align: right;
+  /* display: inline; */
+  font-size:18px;
 }
 
 h4 {
-  text-align: center;
+  text-align: justify;
   font-family: 'Oleo Script', cursive;
 }
 

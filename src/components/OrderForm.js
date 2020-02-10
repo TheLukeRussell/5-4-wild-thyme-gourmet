@@ -23,7 +23,7 @@ class OrderForm extends Component {
 
     render() {
         // const foods = this.props.foods.map(food => <OrderList key={food.id} inCart={food.inCart} name={food.name} food={food} />);
-        const order = this.props.order
+        const order = this.props.order        
         return(
     <form>
         <ul className='list-group'>  

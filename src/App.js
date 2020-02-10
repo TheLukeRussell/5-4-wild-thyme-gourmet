@@ -23,30 +23,13 @@ state = {
 }
 
 addFood = (id) => {
-  const {foods} = this.state;
-  const food = foods[id]
-  // foods.splice(0, food)
-  food.inCart = true;
-  this.setState({
-    order: [food.name]
-  })
-//  console.log(food)
+  const foods = this.state.foods;
+  const order = this.state.order;
+  const food = foods[id];
+  // food.inCart = true;
+    this.setState({order: this.state.order.concat([food.name + ' ~ ' + food.price])})
+  // console.log(this.state.order)
 }
-
-addOrder = (food) => {
-  food.id = this.state.counter
-  let foods = this.state.foods.slice();
-  foods.unshift(food);
-  console.log('food', food);
-
-  this.setState({
-    foods,
-    order: [food.name],
-    counter: this.state.counter + 1
-  });
-};
-
-
 
 // removeItem = (id) => {
 //   const {foods} = this.state;
@@ -69,7 +52,7 @@ addOrder = (food) => {
         <div className='col-7 food-list'>
           <h2>Entreés</h2>
           <h5>Each entreé is served with a choice of a Baked Potato, Sweet Potato, or Frech Fries (the obvious choice)</h5>
-          <FoodList foods={this.state.foods} addOrder={this.addOrder} order={this.state.order} addFood={this.addFood} />
+          <FoodList foods={this.state.foods} order={this.state.order} addFood={this.addFood} />
         </div>
         <div className='col offset-1 order-form'>
           <h2 id='food-order'>Food Order</h2>
