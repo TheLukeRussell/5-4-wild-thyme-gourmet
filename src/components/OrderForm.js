@@ -22,14 +22,15 @@ class OrderForm extends Component {
    
 
     render() {
-        // const foods = this.props.foods.map(food => <OrderList key={food.id} inCart={food.inCart} name={food.name} food={food} />);
-        const order = this.props.order        
+        const order = this.props.order.map(order => <span key={order.id}>{order}<br /></span>)
+        // const foods = this.props.foods.map(food => key={food.id} inCart={food.inCart} name={food.name} food={food});
+        // const order = this.props.order        
         return(
     <form>
         <ul className='list-group'>  
         <li id='order-row'>
         <div className='row no-gutters'>
-            <div className='col-2'><button className='btn btn-outline'><i className='fa fa-ban'></i></button></div>
+            {/* <div className='col-2'><button className='btn btn-outline'><i className='fa fa-ban'></i></button></div> */}
         <div className='col'>
         <p id='list-group'>{order}</p>
         </div>
@@ -41,7 +42,8 @@ class OrderForm extends Component {
                 {/* <input className='col m-3 order-name' type='text' name='text' id='order-name' onChange={this.handleInput} value={this.state.text} placeholder='Name for the Order...'></input> */}
                 </div>
                 <div className='row no-gutters'>
-                <button className='btn col-4 offset-4' onClick={this.handleDelete} id='place-order'>Place Order</button>
+                <button className='btn col-4 offset-4 mb-3' onClick={this.handleDelete} id='place-order'>Place Order</button>
+                <button id='btn-outline' className='btn col-4 offset-4 btn'>Start Over</button>
                 </div>
 </form>
 

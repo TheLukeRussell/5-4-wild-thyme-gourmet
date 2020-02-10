@@ -62,9 +62,9 @@ p {
 }
 
 #list-group {
-  text-align: right;
-  /* display: inline; */
+  text-align: center;
   font-size:18px;
+  line-height: 40pt;
 }
 
 h4 {
@@ -146,14 +146,17 @@ li {
   background-position: left bottom;
 }
 
-.btn-outline {
+#btn-outline {
   color: #AA915F;
-  border-color:#AA915F;
+  border: #AA915F solid 1pt;
+  background: linear-gradient(to right, #fff 50%, #000 50%);
+  background-size: 200% 100%;
+  background-position: bottom right;
+  transition: all .5s ease;
 }
 
-.btn-outline:hover {
-  background-color: #000;
-  color: #AA915F;
+#btn-outline:hover {
+  background-position: left bottom;
 }
 
 #food-order {
