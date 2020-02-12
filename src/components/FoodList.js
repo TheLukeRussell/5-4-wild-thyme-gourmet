@@ -5,17 +5,9 @@ class FoodItem extends Component {
     handleAddFood = (event) => {
         event.preventDefault();
         let index = parseInt(this.props.index);
-        console.log(index);
         this.props.addFood(index)
-
-        // const order = {
-        //     name: this.props.name,
-        //     price: this.props.price
-        // }
-        // console.log(order)
     }
     
-
     render() {
         // console.log(order)
         return(
@@ -23,7 +15,7 @@ class FoodItem extends Component {
             <li id='food-row'>
                 <div className='row no-gutters'>
                     <div className='col'>
-        <h3>{this.props.food.name} - {this.props.food.price}</h3>
+        <h3>{this.props.food.name} - ${this.props.food.price}</h3>
                 </div>
                 </div>
                 <div className='row no-gutters'>

@@ -1,30 +1,10 @@
 import React, {Component} from 'react';
-
-// class OrderList extends Component {
-
-//     render() { 
-//         return(
-            
-//                 <li id='order-row'>
-//                     <div className='row no-gutters'>
-//                         <div className='col-2'><button className='btn btn-outline'><i className='fa fa-ban'></i></button></div>
-//                     <div className='col'>
-//                     <p id='list-group'>{this.props.name}</p>
-//                     </div>
-//                 </div>
-//             </li>
-//         )
-//     }
-// }
-
+import FoodList from './FoodList';
 
 class OrderForm extends Component {
-   
 
     render() {
-        const order = this.props.order.map(order => <span key={order.id}>{order}<br /></span>)
-        // const foods = this.props.foods.map(food => key={food.id} inCart={food.inCart} name={food.name} food={food});
-        // const order = this.props.order        
+        const order = this.props.order.map(order => <span>{order}<br /></span>)
         return(
     <form>
         <ul className='list-group'>  
@@ -37,7 +17,7 @@ class OrderForm extends Component {
     </div>
 </li>
 </ul>
-<h4 className='subtotal'>Subtotal = </h4>
+<h4 className='subtotal'>Subtotal =</h4>
                 <div className='row no-gutters'>
                 {/* <input className='col m-3 order-name' type='text' name='text' id='order-name' onChange={this.handleInput} value={this.state.text} placeholder='Name for the Order...'></input> */}
                 </div>
@@ -46,19 +26,6 @@ class OrderForm extends Component {
                 <button id='btn-outline' className='btn col-4 offset-4 btn'>Start Over</button>
                 </div>
 </form>
-
-
-            //  <form>
-            //     <ul className='list-group'>{foods}</ul>
-            //     <h4 className='subtotal'>Subtotal = </h4>
-            //     <div className='row no-gutters'>
-            //     <input className='col m-3 order-name' type='text' name='text' id='order-name' onChange={this.handleInput} value={this.state.text} placeholder='Name for the Order...'></input>
-            //     </div>
-            //     <div className='row no-gutters'>
-            //     <button className='btn col-4 offset-4' onClick={this.handleDelete} id='place-order'>Place Order</button>
-            //     </div>
-                
-            // </form>
 
             )
         }
