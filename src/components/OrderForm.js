@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
-import FoodList from './FoodList';
 
 class OrderForm extends Component {
-
     render() {
-        const order = this.props.order.map(order => <span>{order}<br /></span>)
+        const order = this.props.order.map(order => <span>{order}</span>)
+        const total = this.props.total
+        // const every_nth = (arr, nth) => arr.filter((e, i) => i % nth === nth - 1);
+        // console.log(console.log(every_nth([order], 3)))
         return(
     <form>
         <ul className='list-group'>  
@@ -17,7 +18,7 @@ class OrderForm extends Component {
     </div>
 </li>
 </ul>
-<h4 className='subtotal'>Subtotal =</h4>
+<h4 className='subtotal'>Subtotal = ${total[2]}</h4>
                 <div className='row no-gutters'>
                 {/* <input className='col m-3 order-name' type='text' name='text' id='order-name' onChange={this.handleInput} value={this.state.text} placeholder='Name for the Order...'></input> */}
                 </div>

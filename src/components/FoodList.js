@@ -9,7 +9,6 @@ class FoodItem extends Component {
     }
     
     render() {
-        // console.log(order)
         return(
             <form>
             <li id='food-row'>

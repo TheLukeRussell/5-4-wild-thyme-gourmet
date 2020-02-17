@@ -28,8 +28,9 @@ addFood = (id) => {
   // food.inCart = true;
     this.setState(
       {
-      order: this.state.order.concat([food.name + ' ~ ' + '$' + food.price]),
-      total: this.state.total.concat([food.price + this.state.total])
+        
+      order: this.state.order.concat([food.name],' ',[food.price], <br />),
+      total: food.price
     }
       )
     }
@@ -46,7 +47,7 @@ addFood = (id) => {
       
         <div className='col-7 food-list'>
           <h2>Entreés</h2>
-          <h5>Each entreé is served with a choice of a Baked Potato, Sweet Potato, or Frech Fries (the obvious choice)</h5>
+          <h5>Each entreé is served with a choice of a Baked Potato, Sweet Potato, or French Fries (the obvious choice)</h5>
           <FoodList foods={this.state.foods} order={this.state.order} total={this.state.order} addFood={this.addFood} />
         </div>
         <div className='col offset-1 order-form'>
